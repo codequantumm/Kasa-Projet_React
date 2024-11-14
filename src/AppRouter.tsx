@@ -8,7 +8,6 @@ function AppRouter() {
     <Router>
         <Routes>
           <Route path="/" element={<Home />} />
-          {/* Route pour gérer les URLs non trouvées */}
           <Route path="*" element={<NotFound />} />
         </Routes>
     </Router>
