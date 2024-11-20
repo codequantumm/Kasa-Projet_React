@@ -1,0 +1,32 @@
+.not-found {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  h1 {
+    font-size: 288px;
+    font-weight: 700;
+    color: #ff6060;
+    margin: 0;
+  }
+
+  .message {
+    font-size: 24px;
+    color: #ff6060;
+    margin-top: 100px;
+  }
+
+  a {
+    font-size: 18px;
+    color: black;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    transition: 0.3s;
+
+    &:hover {
+      color: #ff6060;
+    }
+  }
+}

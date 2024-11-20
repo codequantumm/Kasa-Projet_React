@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import MainLayout from './components/MainLayout';
 import Home from './pages/Home';
 import APropos from './pages/APropos';
+import NotFound from './pages/NotFound';
 import FicheLogement1 from './pages/FicheLogement1';
 import FicheLogement2 from './pages/FicheLogement2';
 import FicheLogement3 from './pages/FicheLogement3';
@@ -28,6 +29,7 @@ function App() {
           <Route path="/ficheLogement4" element={<FicheLogement4 />} />
           <Route path="/ficheLogement5" element={<FicheLogement5 />} />
           <Route path="/ficheLogement6" element={<FicheLogement6 />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </MainLayout>
     </Router>
