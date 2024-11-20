@@ -1,17 +1,23 @@
 import React from 'react';
 import '../styles/banner.scss';
-import banner from '../assets/banner.png'; 
 
-const Banner: React.FC = () => {
+interface BannerProps {
+  src: string;
+  alt: string;
+  text: string;
+}
+
+const Banner: React.FC<BannerProps> = ({ src, alt, text }) => {
   return (
     <section className="banner">
-      <img src={banner} alt="Bannière" className="banner-image" />
+      <img src={src} alt={alt} className="banner-image" />
       <div className="banner-overlay"></div>
       <div className="banner-content">
-        <h2>Chez vous, partout et ailleurs</h2>
+        <h2>{text}</h2>
       </div>
     </section>
   );
 };
 
 export default Banner;
+

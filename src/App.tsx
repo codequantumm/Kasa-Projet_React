@@ -21,7 +21,7 @@ function App() {
       <MainLayout>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/apropos" element={<APropos />} />
+          <Route path="/a-propos" element={<APropos />} />
           <Route path="/ficheLogement1" element={<FicheLogement1 />} />
           <Route path="/ficheLogement2" element={<FicheLogement2 />} />
           <Route path="/ficheLogement3" element={<FicheLogement3 />} />

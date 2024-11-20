@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import '../styles/propertyCards.scss';
 import Banner from '../components/Banner'; 
+import BannerAccueil from '../assets/banner.png';
+import { Service } from '../services';
 
 
 interface Property {
@@ -17,15 +19,8 @@ const Home: React.FC = () => {
  
   useEffect(() => {
     const fetchProperties = async () => {
-      try {
-        const response = await fetch('http://localhost:8080/api/properties');
-        
-      
-        if (!response.ok) {
-          throw new Error('Erreur lors de la récupération des propriétés');
-        }
-        
-        const data = await response.json();
+      try { const service = new Service(); 
+        const data = await service.getProperties(); 
         setProperties(data.slice(0, 6)); 
         setLoading(false);
       } catch (error: any) {
@@ -47,7 +42,11 @@ const Home: React.FC = () => {
 
   return (
     <div className="home">
-      <Banner /> 
+      <Banner 
+        src={BannerAccueil} 
+        alt="Bannière Accueil" 
+        text="Chez vous, partout et ailleurs" 
+      />
       <div className="property-card-wrapper">
         <div className="property-list">
           {properties.map((property) => (

@@ -1,0 +1,40 @@
+.collapse-container {
+    justify-content: center; 
+    width: 85%;
+    margin: 0 auto;
+  }
+
+.collapse {
+    margin: 30px 0;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .collapse-header {
+    background-color: #ff6060; 
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .collapse-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .icon {
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .collapse-content {
+    padding: 15px 20px;
+    background: #F6F6F6;
+    color: black;
+    font-size: 0.9rem;
+  }
+  
