@@ -1,76 +1,86 @@
 .page-container {
-    max-width: 1200px;  
-    margin: 0 auto;     
-    padding: 0 20px;    
-  }
-  
-  .main-content {
-    width: 100%;
-    margin: 0 auto;
-    padding: 20px 0;
-  }
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.main-content {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
 
 body {
-    font-family: 'Montserrat', sans-serif;
-  }  
+  font-family: 'Montserrat', sans-serif;
+}
 
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 0;
-    
-    
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
 
-    &__nav {
-        &-list {
-            list-style: none;
-            display: flex;
-            gap: 3.5rem;
-            
-        }
-
-        &-item a {
-            color: #000000;
-            text-decoration: none;
-            transition: color 0.3s;
-            margin-left: 20px;
-
-            &:hover {
-                color: #ff6060; 
-            }
-        }
+  &__nav {
+    &-list {
+      list-style: none;
+      display: flex;
+      gap: 3.5rem;
     }
+
+    &-item a {
+      color: #000000;
+      text-decoration: none;
+      transition: color 0.3s;
+      margin-left: 20px;
+
+      &:hover {
+        color: #ff6060;
+      }
+    }
+  }
 }
 
 .footer {
-    background-color: #000; 
-    color: #fff; 
-    
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  background-color: #000;
+  color: #fff;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+  position: relative;
+}
+
+.footer-logo {
+  max-width: 100px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.footer-text {
+  font-size: 14px;
+  width: 100%;
+  padding: 0 20px;
+}
+@media (max-width: 480px) {
+  /* En-tête */
+
+  .header__logo img {
+    max-width: 100px; /* Logo plus petit sur mobile */
+    width: 100px; /* Définit une largeur fixe */
+  }
+
+  .header__nav-list {
+    width: 100%;
     text-align: center;
-    padding: 20px 0;
-    width: 100%;
-    position: relative;
+    margin-top: 15px;
+    font-size: 12px;
+    gap: 1rem;
   }
-  
-  .footer-logo {
-    max-width: 100px; 
-    margin-bottom: 10px;
-    color: #fff;
+
+  .banner-content h2 {
+    font-size: 20px;
   }
-  
-  .footer-text {
-    font-size: 14px;
-    width: 100%;
-    padding: 0 20px; 
-  }
-  
-  .about-page {
-    display: block;
-    visibility: visible;
-    opacity: 1;
-  }
-  
+}

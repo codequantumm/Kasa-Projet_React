@@ -19,3 +19,17 @@ export class Service {
     }
 }
 
+
+export const getFicheLogement = async (id: string) => {
+    try {
+      const response = await fetch(`http://localhost:8080/api/properties/${id}`);
+      if (!response.ok) {
+        throw new Error(`Erreur HTTP : ${response.status}`);
+      }
+      return response.json(); 
+    } catch (error) {
+      console.error('Erreur lors de la récupération des données :', error);
+      throw error;
+    }
+  };
+  

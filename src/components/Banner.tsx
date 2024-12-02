@@ -1,11 +1,7 @@
 import React from 'react';
 import '../styles/banner.scss';
+import { BannerProps } from '../definitions/bannerProps';
 
-interface BannerProps {
-  src: string;
-  alt: string;
-  text: string;
-}
 
 const Banner: React.FC<BannerProps> = ({ src, alt, text }) => {
   return (
