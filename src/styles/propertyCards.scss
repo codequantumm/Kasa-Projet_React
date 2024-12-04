@@ -61,15 +61,13 @@
   }
 }
 
+@media (max-width: 768px) {
+  .property-list {
+    grid-template-columns: 48% 48%;
+  }
+}
 @media (max-width: 480px) {
   .property-list {
     grid-template-columns: 100%;
-  }
-}
-
-@media (max-width: 768px) {
-  .property-list {
-    grid-template-columns: 50% 50%;
-    justify-content: space-between;
   }
 }

@@ -1,85 +1,129 @@
-.fiche-logement {
+.housing {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start; // Alignement en haut
+  gap: 2rem;
 
-  h1 {
+  h2 {
     color: #ff6060;
-  }
-  h3 {
-    font-size: 1rem;
-    font-weight: normal;
+    font-weight: 400;
   }
 
-  .top-info {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-  }
-  .tags-stars {
-    display: flex;
-    justify-content: space-between;
+  h3 {
+    font-size: 16px;
+    font-weight: 500;
   }
 
   .tags {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; // Les tags s'affichent sur plusieurs lignes si nécessaire
     gap: 0.5rem;
-  }
 
-  .tag {
-    background-color: #ff6060;
-    padding: 0.5rem 1rem;
-    border-radius: 10px;
-    font-size: 0.875rem;
-    font-weight: bold;
-    color: white;
-  }
-
-  .host-info {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  h3 {
-    font-size: 1rem;
-    font-weight: 600;
-    color: fff6060;
-    margin: 0;
-  }
-
-  img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    object-fit: cover;
-  }
-
-  .rating {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 0.5rem;
-    margin-top: 0.5rem;
-
-    p {
-      font-size: 1rem;
+    .tag {
+      background-color: #ff6060;
+      padding: 0.5rem 1rem;
+      border-radius: 10px;
+      font-size: 0.875rem;
       font-weight: bold;
-      color: #444;
-      margin: 0;
+      color: white;
+    }
+  }
+
+  &__host {
+    display: flex;
+    flex-direction: column; // Affiche le contenu en colonne
+    align-items: flex-end; // Aligne les éléments sur la droite
+    gap: 0.5rem;
+
+    &-info {
+      display: flex;
+      align-items: center; // Aligne le texte et l'image au centre verticalement
+      gap: 0.5rem;
+      color: #ff6060;
+      margin-top: 15px;
+
+      img {
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+      }
     }
 
     .stars {
-      color: #ff6060;
+      display: flex;
+      gap: 0.25rem; // Espacement entre les étoiles
+
+      .filled-stars {
+        color: #ff6060; // Couleur des étoiles remplies
+      }
+
+      .star-empty {
+        color: #e0e0e0; // Couleur des étoiles vides
+      }
+    }
+  }
+}
+
+.housing__rating {
+  padding-top: 35px;
+}
+
+.tag {
+  background-color: #ff6060;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: white;
+}
+
+#details {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+
+  .collapse {
+    width: 49%;
+  }
+}
+@media (max-width: 768px) {
+  .housing {
+    display: inline;
+  }
+
+  #details {
+    display: inline;
+
+    .collapse {
+      width: 100%;
     }
   }
 
-  .bottom-info {
-    display: flex;
-    justify-content: space-between;
+  .housing {
+    display: inline;
+  }
 
-    .collapse {
-      width: 48%;
-    }
+  .housing__host-info {
+    margin-left: 77%;
+  }
+
+  .housing__host {
+    align-items: flex-start;
+  }
+
+  .housing__host .stars {
+    margin-top: -40px;
+  }
+  .housing__rating {
+    padding-top: 0;
+  }
+}
+@media (max-width: 425px) {
+  .housing__rating {
+    padding-top: 0;
+  }
+  .housing__host-info {
+    margin-left: 70%;
   }
 }

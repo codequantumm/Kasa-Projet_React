@@ -14,7 +14,9 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
       <div className="page-container">
         <header className="header">
           <div className="header__logo">
-            <img src={logo} alt="Logo" className="logo" />
+            <Link to="/">
+              <img src={logo} alt="Logo" className="logo" />
+            </Link>
           </div>
           <nav className="header__nav">
             <ul className="header__nav-list">

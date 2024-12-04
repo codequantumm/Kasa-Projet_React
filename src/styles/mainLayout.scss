@@ -65,19 +65,19 @@ body {
   padding: 0 20px;
 }
 @media (max-width: 480px) {
-  /* En-tête */
-
   .header__logo img {
-    max-width: 100px; /* Logo plus petit sur mobile */
-    width: 100px; /* Définit une largeur fixe */
+    max-width: 100px;
+    width: 100px;
   }
 
   .header__nav-list {
-    width: 100%;
     text-align: center;
     margin-top: 15px;
     font-size: 12px;
-    gap: 1rem;
+    text-transform: uppercase;
+  }
+  .header__nav-item a {
+    margin-left: -25px;
   }
 
   .banner-content h2 {

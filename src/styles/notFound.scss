@@ -30,3 +30,9 @@
     }
   }
 }
+
+@media (max-width: 425px) {
+  .not-found h1 {
+    font-size: 140px;
+  }
+}
