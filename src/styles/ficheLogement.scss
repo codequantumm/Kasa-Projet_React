@@ -1,7 +1,7 @@
 .housing {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start; // Alignement en haut
+  align-items: flex-start;
   gap: 2rem;
 
   h2 {
@@ -16,7 +16,7 @@
 
   .tags {
     display: flex;
-    flex-wrap: wrap; // Les tags s'affichent sur plusieurs lignes si nécessaire
+    flex-wrap: wrap;
     gap: 0.5rem;
 
     .tag {
@@ -31,13 +31,13 @@
 
   &__host {
     display: flex;
-    flex-direction: column; // Affiche le contenu en colonne
-    align-items: flex-end; // Aligne les éléments sur la droite
+    flex-direction: column;
+    align-items: flex-end;
     gap: 0.5rem;
 
     &-info {
       display: flex;
-      align-items: center; // Aligne le texte et l'image au centre verticalement
+      align-items: center;
       gap: 0.5rem;
       color: #ff6060;
       margin-top: 15px;
@@ -51,14 +51,14 @@
 
     .stars {
       display: flex;
-      gap: 0.25rem; // Espacement entre les étoiles
+      gap: 0.25rem;
 
       .filled-stars {
-        color: #ff6060; // Couleur des étoiles remplies
+        color: #ff6060;
       }
 
       .star-empty {
-        color: #e0e0e0; // Couleur des étoiles vides
+        color: #e0e0e0;
       }
     }
   }

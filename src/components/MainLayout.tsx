@@ -3,10 +3,7 @@ import { Link } from 'react-router-dom'
 import logo from '../assets/logo.png'
 import logoFooter from '../assets/logoFooter.png'
 import '../styles/mainLayout.scss'
-
-interface MainLayoutProps {
-  children: React.ReactNode
-}
+import { MainLayoutProps } from '../definitions/mainLayoutProps'
 
 const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
   return (
