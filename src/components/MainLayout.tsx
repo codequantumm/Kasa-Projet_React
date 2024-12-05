@@ -1,29 +1,40 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-
-interface MainLayoutProps {
-  children: React.ReactNode;  
-}
+import React from 'react'
+import { Link } from 'react-router-dom'
+import logo from '../assets/logo.png'
+import logoFooter from '../assets/logoFooter.png'
+import '../styles/mainLayout.scss'
+import { MainLayoutProps } from '../definitions/mainLayoutProps'
 
 const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
   return (
-    <div>
-      <header>
-        <nav>
-          <Link to="/">Home</Link>
-          <Link to="/fiches-logement">Fiches Logement</Link>
-          <Link to="/a-propos">À propos</Link>
-        </nav>
-      </header>
+    <>
+      <div className="page-container">
+        <header className="header">
+          <div className="header__logo">
+            <Link to="/">
+              <img src={logo} alt="Logo" className="logo" />
+            </Link>
+          </div>
+          <nav className="header__nav">
+            <ul className="header__nav-list">
+              <li className="header__nav-item">
+                <Link to="/">Accueil</Link>
+              </li>
+              <li className="header__nav-item">
+                <Link to="/a-propos">À propos</Link>
+              </li>
+            </ul>
+          </nav>
+        </header>
 
-      <main>{children}</main>
-
-      <footer>
-        <p>Footer Content</p>
+        <main className="main-content">{children}</main>
+      </div>
+      <footer className="footer">
+        <img src={logoFooter} alt="logo" className="footer-logo" />
+        <p>&copy; 2024 Kasa. All rights reserved.</p>
       </footer>
-    </div>
-  );
-};
+    </>
+  )
+}
 
-export default MainLayout;
-
+export default MainLayout
