@@ -3,7 +3,7 @@ import '../styles/propertyCards.scss'
 import { Link } from 'react-router-dom'
 import Banner from '../components/Banner'
 import BannerAccueil from '../assets/banner.png'
-import { Service } from '../services'
+import { Service } from '../services/propertyServices'
 import { Property } from '../definitions/property'
 
 const Home: React.FC = () => {
@@ -16,7 +16,8 @@ const Home: React.FC = () => {
       try {
         const service = new Service()
         const data = await service.getProperties()
-        setProperties(data.slice(0, 6))
+        console.log('Propriétés recues', data)
+        setProperties(data)
         setLoading(false)
       } catch (error: any) {
         setError(error.message)

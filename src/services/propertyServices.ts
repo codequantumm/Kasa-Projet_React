@@ -4,7 +4,7 @@ export class Service {
    async getProperties() :Promise<[]> {
         try {
             const response = await fetch('http://localhost:8080/api/properties');
-            
+            console.log('Réponse gde l\'API :', response);
           
             if (!response.ok) {
               throw new Error('Erreur lors de la récupération des propriétés');

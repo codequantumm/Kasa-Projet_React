@@ -22,9 +22,11 @@ const BannerCarousel: React.FC<BannerCarouselProps> = ({ images }) => {
 
   return (
     <div className="banner-carousel">
-      <button className="carousel-button prev" onClick={prevImage}>
-        <FontAwesomeIcon icon={faChevronLeft} />
-      </button>
+      {images.length > 1 && (
+        <button className="carousel-button prev" onClick={prevImage}>
+          <FontAwesomeIcon icon={faChevronLeft} />
+        </button>
+      )}
 
       <div className="carousel-container">
         <img
@@ -34,13 +36,17 @@ const BannerCarousel: React.FC<BannerCarouselProps> = ({ images }) => {
         />
       </div>
 
-      <button className="carousel-button next" onClick={nextImage}>
-        <FontAwesomeIcon icon={faChevronRight} />
-      </button>
+      {images.length > 1 && (
+        <button className="carousel-button next" onClick={nextImage}>
+          <FontAwesomeIcon icon={faChevronRight} />
+        </button>
+      )}
 
-      <div className="carousel-pagination">
-        {currentImageIndex + 1}/{images.length}
-      </div>
+      {images.length > 1 && (
+        <div className="carousel-pagination">
+          {currentImageIndex + 1}/{images.length}
+        </div>
+      )}
     </div>
   )
 }

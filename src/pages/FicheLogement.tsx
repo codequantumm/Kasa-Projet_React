@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useParams, Navigate } from 'react-router-dom'
-import { getFicheLogement } from '../services'
+import { getFicheLogement } from '../services/propertyServices'
 import BannerCarousel from '../components/BannerCarousel'
 import Collapse from '../components/Collapse'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -19,6 +19,7 @@ const FicheLogement: React.FC = () => {
         if (!id) throw new Error('ID du logement introuvable.')
 
         const data = await getFicheLogement(id)
+        console.log('Données récupérées pour le logement :', data)
         setLogement(data)
         setLoading(false)
       } catch (error: any) {
